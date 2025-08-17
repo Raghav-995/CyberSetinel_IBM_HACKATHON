@@ -1,0 +1,13 @@
+{
+  "trusted_locations": [
+    "New York, US",
+    "London, UK",
+    "Tokyo, JP"
+  ],
+  "unusual_countries": [
+    "Russia",
+    "Iran",
+    "North Korea",
+    "France"
+  ]
+}

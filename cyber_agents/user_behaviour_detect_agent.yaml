@@ -1,0 +1,31 @@
+spec_version: v1
+kind: native
+name: user_behavior_analytics
+llm: watsonx/ibm/granite-3-8b-instruct
+style: react
+description: >
+  Agent for detecting anomalous user login behavior such as logins from unusual
+  locations, multiple devices, or suspicious failed login attempts.
+
+instructions: >
+  You are a User Behavior Analytics (UBA) agent.
+  Your job is to analyze login logs and detect anomalies such as:
+  - Logins from unusual countries
+  - Multiple devices per user
+  - Failed attempts after successful logins
+  Always use the tool `analyze_user_behavior` to evaluate user behavior.
+  Do not analyze logs yourself.
+
+routes:
+  - condition: "$.0.user_id"
+    execute:
+      - say: "Analyzing user behavior anomalies in login events..."
+      - tool: analyze_user_behavior
+
+tools:
+  - analyze_user_behavior
+
+tags:
+  - security
+  - cybersecurity
+  - threat-detection

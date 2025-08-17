@@ -1,0 +1,62 @@
+# spec_version: v1
+# kind: native
+# name: threat_response_agent
+# llm: watsonx/ibm/granite-3-8b-instruct
+# style: react
+# description: >
+#   End-to-end cybersecurity agent that detects threats and triggers automated responses.
+
+# instructions: >
+#   You are a cybersecurity orchestrator agent.
+#   - If the input contains network logs (JSON with timestamp and source_ip), call detect_threats.
+#   - After detect_threats returns threats, ALWAYS call automate_response with those threats.
+#   - Summarize the results to the user.
+
+# routes:
+#   - condition: "$.0.source_ip"
+#     execute:
+#       - say: "Logs detected. Running threat detection..."
+#       - tool: detect_threats
+#       - say: "Threats identified. Initiating automated response..."
+#       - tool: automate_response
+#       - say: "Here are the actions I recommend: {{output.actions}}"
+
+# tools:
+#   - detect_threats
+#   - automate_response
+# tags:
+#   - security
+#   - cybersecurity
+#   - threat-detection
+
+spec_version: v1
+kind: native
+name: threat_response_agent
+llm: watsonx/ibm/granite-3-8b-instruct
+style: react
+description: >
+  Detects security threats from network logs and triggers automated responses.
+instructions: >
+  You are a cybersecurity orchestrator agent.
+  
+  When you receive network logs (list of dictionaries with timestamp, source_ip, action):
+  1. First call detect_threats to analyze the logs
+  2. If threats are found, call automate_response to handle them
+  3. Finally call log_incident to create compliance reports
+  
+  If input is empty or invalid, ask: "Please provide network logs to analyze."
+  
+  Always follow this sequence: detect_threats → automate_response → log_incident
+
+tools:
+  - detect_threats
+  - automate_response
+  - log_incident
+
+tags:
+  - security
+  - cybersecurity
+  - threat-detection
+
+knowledge_base:
+  - mitre_attack_knowledge_base

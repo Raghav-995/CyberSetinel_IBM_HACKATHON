@@ -1,0 +1,20 @@
+spec_version: v1
+kind: native
+name: incident_logger_agent
+llm: watsonx/ibm/granite-3-8b-instruct
+style: react
+description: >
+  Logs security incidents for compliance and forensic review.
+instructions: >
+  You are an incident logger agent.
+  - Receive a list of threats from another agent.
+  - Generate structured incident reports using a knowledge base template.
+  - Return a list of incidents with MITRE ATT&CK mapping and compliance metadata.
+tools:
+  - log_incident
+collaborators:
+  - threat_response_agent
+tags:
+  - security
+  - compliance
+  - forensics

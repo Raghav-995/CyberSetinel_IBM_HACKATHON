@@ -1,0 +1,43 @@
+# pandas==2.2.2  # Specify a stable version
+# ibm-watsonx-orchestrate-agent-builder==1.0.0 # Or the latest compatible version
+# ibm-watsonx-ai==1.3.34 # Or the latest version, {Link: as indicated in PyPI https://pypi.org/project/ibm-watsonx-ai/}
+# pydantic==2.7.4 # Ensure compatibility with ibm-watsonx-orchestrate-agent-builder and ibm-watsonx-ai
+# requests==2.32.3
+# ibm-watsonx-orchestrate==1.0.0 # Ensure this matches the agent builder version
+
+pandas
+ibm-watsonx-ai
+
+List 20 recent CVEs
+
+Why do CVEs matter?
+
+Find details for this CVE: {"cve_id": "CVE-2023-5877"}
+
+How cve works
+
+
+Can detect the threats and log the events too "events": [ 
+{ "is_threat": True, "confidence": 0.92, "source_ip": "103.245.12.33", "user_id": 
+"john.doe", "reason": "Login from unusual country: France (Paris)", "severity": "high", \
+"mitre_technique": "T1078 - Validated account" } ]
+
+What is the difference between a direct prompt injection and an indirect prompt injection?
+
+https://api.example.com can yu analuze the url
+
+[{ "is_threat": True, "confidence": 0.92, "source_ip": "192.168.1.100",
+ "reason": "Brute-force attack detected: 4 failed logins from 192.168.1.100 in 120 seconds.",
+  "severity": "high", "mitre_technique": "T1110 - Brute force" }, { "is_threat": True, "confidence": 0.8,
+   "source_ip": "134.138.1.100", "reason": "Phishing detected: An attacker sends deceptive emails",
+ "severity": "high", "mitre_technique": "T1566- Phishing" }, ]
+
+ Detection and Analytics
+
+ How does the guide suggest a Level 1 cybersecurity team with limited resources can get started with ATT&CK for threat intelligence?
+
+ What are the four primary use cases of the MITRE ATT&CK framework for which the guide provides advice?
+
+ [ {"timestamp": "2025-04-05T03:05:01", "source_ip": "192.168.1.100", "action": "success", "bytes_transferred": 512, "user_agent": "Mozilla/5.0"}, {"timestamp": "2025-04-05T03:06:10", "source_ip": "192.168.1.200", "action": "failure", "bytes_transferred": 1024, "user_agent": "Mozilla/5.0"}, {"timestamp": "2025-04-05T03:06:20", "source_ip": "192.168.1.200", "action": "failure", "bytes_transferred": 1024, "user_agent": "Mozilla/5.0"}, {"timestamp": "2025-04-05T03:06:40", "source_ip": "192.168.1.200", "action": "failure", "bytes_transferred": 1024, "user_agent": "Mozilla/5.0"}, {"timestamp": "2025-04-05T03:06:50", "source_ip": "192.168.1.200", "action": "failure", "bytes_transferred": 1024, "user_agent": "Mozilla/5.0"}, {"timestamp": "2025-04-05T03:07:00", "source_ip": "192.168.1.200", "action": "failure", "bytes_transferred": 1024, "user_agent": "Mozilla/5.0"} ]
+
+ detect anomalies? {"timestamp": "2025-04-05T08:00:01", "user_id": "john.doe", "source_ip": "192.168.1.100", "device": "Windows", "location": "New York", "country": "US", "action": "success"}, {"timestamp": "2025-04-05T08:01:02", "user_id": "john.doe", "source_ip": "192.168.1.100", "device": "Windows", "location": "New York", "country": "US", "action": "success"}, {"timestamp": "2025-04-05T08:02:03", "user_id": "john.doe", "source_ip": "192.168.1.100", "device": "Windows", "location": "New York", "country": "US", "action": "success"}, {"timestamp": "2025-04-05T17:05:04", "user_id": "john.doe", "source_ip": "103.245.12.33", "device": "MacBook", "location": "Paris", "country": "FR", "action": "failure"}, {"timestamp": "2025-04-05T17:06:05", "user_id": "john.doe", "source_ip": "103.245.12.33", "device": "MacBook", "location": "Paris", "country": "FR", "action": "success"}, {"timestamp": "2025-04-05T17:07:06", "user_id": "john.doe", "source_ip": "103.245.12.33", "device": "MacBook", "location": "Paris", "country": "FR", "action": "success"} ]

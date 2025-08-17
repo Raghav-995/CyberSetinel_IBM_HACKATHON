@@ -1,0 +1,8 @@
+spec_version: v1
+kind: native
+name: nicks_stock_agent
+description: a stock research agent that can find stock prizes, stock info and income details
+llm: watsonx/meta-llama/llama-3-3-70b-instruct
+style: react
+knowledge_base:
+  - "knowledge_base_name"

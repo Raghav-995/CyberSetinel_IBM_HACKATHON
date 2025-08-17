@@ -1,0 +1,18 @@
+{
+  "template": {
+    "incident_id": "INC-{year}-{month}{day}-{id}",
+    "timestamp": "{now}",
+    "summary": "User {user_id} logged in from unusual location ({country})",
+    "impact": "High - potential account compromise",
+    "compliance": [
+      "GDPR Article 33",
+      "NIST SP 800-61 Rev. 2",
+      "ISO 27001 A.16.1.5"
+    ],
+    "response_plan": [
+      "Quarantine device",
+      "Reset password",
+      "Notify user"
+    ]
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "techniques": [
+    {
+      "id": "T1078",
+      "name": "Validated account",
+      "description": "An attacker gains access to a valid account. This can be done through credential theft, password spraying, or brute force.",
+      "tactic": "Initial Access",
+      "mitigation": "Implement multi-factor authentication (MFA), enforce strong password policies, monitor for unusual login patterns."
+    },
+    {
+      "id": "T1110",
+      "name": "Brute force",
+      "description": "An attacker tries to gain access by systematically trying multiple passwords or PINs.",
+      "tactic": "Credential Access",
+      "mitigation": "Use rate limiting, lock accounts after failed attempts, deploy WAF rules."
+    },
+    {
+      "id": "T1059",
+      "name": "Command and scripting interpreter",
+      "description": "An attacker uses a command-line interface to execute commands on a system.",
+      "tactic": "Execution",
+      "mitigation": "Disable unnecessary scripting, restrict execution to trusted binaries."
+    },
+    {
+      "id": "T1003",
+      "name": "Credentials from password dump",
+      "description": "An attacker extracts credentials from a local machine or memory using tools like Mimikatz.",
+      "tactic": "Credential Access",
+      "mitigation": "Enable Credential Guard, disable LM/NTLM, use LAPS for local admin passwords."
+    },
+    {
+      "id": "T1078",
+      "name": "Validated account",
+      "description": "An attacker gains access to a valid account. This can be done through credential theft, password spraying, or brute force.",
+      "tactic": "Initial Access",
+      "mitigation": "Implement multi-factor authentication (MFA), enforce strong password policies, monitor for unusual login patterns."
+    },
+    {
+      "id": "T1566",
+      "name": "Phishing",
+      "description": "An attacker sends deceptive emails to trick users into revealing credentials or installing malware.",
+      "tactic": "Initial Access",
+      "mitigation": "Train users on phishing awareness, implement email filtering, use DMARC/DKIM/SPF."
+    },
+    {
+      "id": "T1047",
+      "name": "Windows Management Instrumentation (WMI)",
+      "description": "An attacker uses WMI to execute commands remotely on Windows systems.",
+      "tactic": "Execution",
+      "mitigation": "Restrict WMI permissions, disable unused WMI providers, monitor WMI activity."
+    },
+    {
+      "id": "T1071",
+      "name": "Application layer protocol",
+      "description": "An attacker uses protocols like HTTP, HTTPS, or DNS to exfiltrate data or maintain persistence.",
+      "tactic": "Exfiltration",
+      "mitigation": "Monitor outbound traffic, block non-essential protocols, use TLS inspection."
+    },
+    {
+      "id": "T1090",
+      "name": "Proxy",
+      "description": "An attacker uses a proxy server to hide their identity or bypass network controls.",
+      "tactic": "Exfiltration",
+      "mitigation": "Block known malicious proxies, monitor for tunneling behavior, audit proxy usage."
+    },
+    {
+      "id": "T1537",
+      "name": "Pass the hash",
+      "description": "An attacker uses stolen NTLM hashes to authenticate without cracking passwords.",
+      "tactic": "Credential Access",
+      "mitigation": "Disable NTLM, enable Kerberos, use LAPS."
+    },
+    {
+      "id": "T1195",
+      "name": "Supply chain compromise",
+      "description": "An attacker compromises a software vendor to distribute malicious code.",
+      "tactic": "Initial Access",
+      "mitigation": "Verify software integrity, use SBOMs, conduct third-party audits."
+    },
+    {
+      "id": "T1071",
+      "name": "Application layer protocol",
+      "description": "An attacker uses protocols like HTTP, HTTPS, or DNS to exfiltrate data or maintain persistence.",
+      "tactic": "Exfiltration",
+      "mitigation": "Monitor outbound traffic, block non-essential protocols, use TLS inspection."
+    },
+    {
+      "id": "T1566",
+      "name": "Phishing",
+      "description": "An attacker sends deceptive emails to trick users into revealing credentials or installing malware.",
+      "tactic": "Initial Access",
+      "mitigation": "Train users on phishing awareness, implement email filtering, use DMARC/DKIM/SPF."
+    },
+    {
+      "id": "T1003",
+      "name": "Credentials from password dump",
+      "description": "An attacker extracts credentials from a local machine or memory using tools like Mimikatz.",
+      "tactic": "Credential Access",
+      "mitigation": "Enable Credential Guard, disable LM/NTLM, use LAPS for local admin passwords."
+    },
+    {
+      "id": "T1047",
+      "name": "Windows Management Instrumentation (WMI)",
+      "description": "An attacker uses WMI to execute commands remotely on Windows systems.",
+      "tactic": "Execution",
+      "mitigation": "Restrict WMI permissions, disable unused WMI providers, monitor WMI activity."
+    },
+    {
+      "id": "T1566",
+      "name": "Phishing",
+      "description": "An attacker sends deceptive emails to trick users into revealing credentials or installing malware.",
+      "tactic": "Initial Access",
+      "mitigation": "Train users on phishing awareness, implement email filtering, use DMARC/DKIM/SPF."
+    },
+    {
+      "id": "T1071",
+      "name": "Application layer protocol",
+      "description": "An attacker uses protocols like HTTP, HTTPS, or DNS to exfiltrate data or maintain persistence.",
+      "tactic": "Exfiltration",
+      "mitigation": "Monitor outbound traffic, block non-essential protocols, use TLS inspection."
+    },
+    {
+      "id": "T1090",
+      "name": "Proxy",
+      "description": "An attacker uses a proxy server to hide their identity or bypass network controls.",
+      "tactic": "Exfiltration",
+      "mitigation": "Block known malicious proxies, monitor for tunneling behavior, audit proxy usage."
+    },
+    {
+      "id": "T1537",
+      "name": "Pass the hash",
+      "description": "An attacker uses stolen NTLM hashes to authenticate without cracking passwords.",
+      "tactic": "Credential Access",
+      "mitigation": "Disable NTLM, enable Kerberos, use LAPS."
+    },
+    {
+      "id": "T1195",
+      "name": "Supply chain compromise",
+      "description": "An attacker compromises a software vendor to distribute malicious code.",
+      "tactic": "Initial Access",
+      "mitigation": "Verify software integrity, use SBOMs, conduct third-party audits."
+    }
+  ]
+}

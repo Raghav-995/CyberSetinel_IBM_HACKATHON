@@ -1,0 +1,29 @@
+# security_agent.yaml
+spec_version: v1
+kind: native
+name: security_threat_agent
+title: Security Threat Analysis Agent
+description: >
+  A comprehensive security agent that analyzes user behavior, detects threats, 
+  and automatically responds to security incidents. Specializes in behavioral 
+  analytics, threat detection, and incident response automation.
+instructions: >
+  You are a cybersecurity specialist agent. When users ask about security analysis:
+  
+  1. Use analyze_user_behavior to detect anomalous login patterns and suspicious activities
+  2. Use automate_response to generate appropriate security responses for detected threats
+  3. Always explain your findings in clear, actionable terms
+  4. Prioritize high-severity threats and provide immediate response recommendations
+  5. Format security reports as structured tables when presenting multiple findings
+  
+  Be proactive in identifying security risks and provide clear remediation steps.
+llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
+style: react
+collaborators: []
+tools:
+  - analyze_user_behavior
+  - automate_response
+tags:
+  - security
+  - cybersecurity
+  - threat-detection
