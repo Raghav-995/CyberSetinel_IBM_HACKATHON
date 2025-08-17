@@ -53,9 +53,9 @@ Create a file named .env in the root directory of your project and add your IBM 
 
 .env file example:
 
-WATSONX_API_KEY="your_api_key"
+`WATSONX_API_KEY="your_api_key"
 WATSONX_PROJECT_ID="your_project_id"
-WATSONX_URL="your_url"
+WATSONX_URL="your_url"`
 
 ⚠️ Important: The .env file should not be committed to Git as it contains sensitive information. It is already included in the .gitignore file for this project.
 
